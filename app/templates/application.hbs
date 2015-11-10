@@ -1,0 +1,7 @@
+<h2 id="title">Welcome to playNote</h2>
+	{{#if session.isAuthenticated}}
+		<button {{action "signOut"}}>Logout</button><br>
+	{{outlet}}
+  	{{else}}
+    	<button {{action "signIn" "google"}}>Sign in with google</button>
+  	{{/if}}
