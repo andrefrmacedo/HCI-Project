@@ -1,0 +1,9 @@
+<div>
+	{{#if drop}}
+		{{input type="text" placeholder="Youtube url" value=url}}
+		<button {{action 'addVideo'}}>Add</button>
+	{{else}}
+		<button {{action 'toggleDrop'}}>Add Video</button>
+	{{/if}}
+</div>
+

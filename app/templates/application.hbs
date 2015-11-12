@@ -3,5 +3,7 @@
 		<button {{action "signOut"}}>Logout</button><br>
 	{{outlet}}
   	{{else}}
-    	<button {{action "signIn" "google"}}>Sign in with google</button>
+    	{{#link-to 'dashboard'}}<img src="assets/images/google_btn.png" {{action 'signIn' 'google'}}>{{/link-to}}
+    	{{#link-to 'dashboard'}}<img src="assets/images/facebook_btn.png" {{action 'signIn' 'facebook'}}>{{/link-to}}
+    	{{#link-to 'dashboard'}}<img src="assets/images/twitter_btn.png" {{action 'signIn' 'twitter'}}>{{/link-to}}
   	{{/if}}
