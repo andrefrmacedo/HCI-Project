@@ -6,6 +6,7 @@ module.exports = function(environment) {
     environment: environment,
     contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com https://www.googleapis.com" },
     firebase: 'https://playnote.firebaseio.com/',
+    youtubeKey: 'AIzaSyAkmn5sCYpkPY_obNcQfyOF3WLOXBJFkkc',
     baseURL: '/',
     locationType: 'auto',
     torii: {

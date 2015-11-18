@@ -5,9 +5,9 @@ export default Ember.Route.extend({
 		return this.store.query('video',{orderBy: 'userID', equalsTo: this.get('session.uid')});
 	},
 
-	afterModel: function(videos, transition){
+	/*afterModel: function(videos, transition){
 		videos.map(item=>{
-			console.log(item.get('response'));
+			console.log(item.get('response.items'));
 		});
-	}
+	}*/
 });
