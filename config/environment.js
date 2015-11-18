@@ -4,7 +4,10 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'play-note',
     environment: environment,
-    contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com https://www.googleapis.com" },
+    contentSecurityPolicy: { 
+      'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com https://www.googleapis.com",
+      'img-src': "'self' https://i.ytimg.com"
+    },
     firebase: 'https://playnote.firebaseio.com/',
     youtubeKey: 'AIzaSyAkmn5sCYpkPY_obNcQfyOF3WLOXBJFkkc',
     baseURL: '/',
