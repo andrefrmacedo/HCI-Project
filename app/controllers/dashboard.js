@@ -23,7 +23,7 @@ export default Ember.Controller.extend({
 					channelId: data['items'][0]['snippet']['channelId'],
 					channelTitle: data['items'][0]['snippet']['channelTitle'],
 					publishedAt: data['items'][0]['snippet']['publishedAt'],
-				}
+				};
 
 				let newVid=self.store.createRecord('video',{
 					userID: self.get('session.uid'),

@@ -6,7 +6,9 @@ module.exports = function(environment) {
     environment: environment,
     contentSecurityPolicy: { 
       'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com https://www.googleapis.com",
-      'img-src': "'self' https://i.ytimg.com"
+      'img-src': "'self' https://i.ytimg.com",
+      'frame-src': "'self' https://www.youtube.com",
+      'script-src': "'self' 'unsafe-eval' https://www.youtube.com https://s.ytimg.com",
     },
     firebase: 'https://playnote.firebaseio.com/',
     youtubeKey: 'AIzaSyAkmn5sCYpkPY_obNcQfyOF3WLOXBJFkkc',
