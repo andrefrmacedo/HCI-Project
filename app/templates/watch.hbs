@@ -1,3 +1,4 @@
 {{model.youtube.title}}
 
-{{video-frame model=model.youtube}}
+{{video-frame model=model.youtube myPlayer=myPlayer}}
+<button {{action 'seekTo' 50 target=myPlayer }} >test</button>
