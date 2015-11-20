@@ -1,25 +1,24 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('add-video', 'Integration | Component | add video', {
+moduleForComponent('video-frame', 'Integration | Component | video frame', {
   integration: true
 });
 
 test('it renders', function(assert) {
-  assert.expect(2);
-
+  
   // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
+  // Handle any actions with this.on('myAction', function(val) { ... });" + EOL + EOL +
 
-  this.render(hbs`{{add-video}}`);
+  this.render(hbs`{{video-frame}}`);
 
   assert.equal(this.$().text().trim(), '');
 
-  // Template block usage:
+  // Template block usage:" + EOL +
   this.render(hbs`
-    {{#add-video}}
+    {{#video-frame}}
       template block text
-    {{/add-video}}
+    {{/video-frame}}
   `);
 
   assert.equal(this.$().text().trim(), 'template block text');

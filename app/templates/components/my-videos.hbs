@@ -1,8 +1,10 @@
 {{#each model as |video|}}
+	{{#link-to 'watch' video}}
 	<div>
 		<img src={{video.youtube.thumbnails.default.url}}>
 		{{video.youtube.title}}
 		by: {{video.youtube.channelTitle}}
 	</div>
+	{{/link-to}}
 {{/each}}
 
