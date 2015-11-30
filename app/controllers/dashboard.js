@@ -28,6 +28,7 @@ export default Ember.Controller.extend({
 				let newVid=self.store.createRecord('video',{
 					userID: self.get('session.uid'),
 					youtube: myData,
+					notes: [],
 				});
 
 				newVid.save();

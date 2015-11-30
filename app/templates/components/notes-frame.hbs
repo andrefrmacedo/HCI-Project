@@ -1,0 +1,7 @@
+{{input value=keyword placeholder="Write keyword here..." enter="addNote"}}
+<br>
+{{#each model.notes as |note|}}
+	<div  {{action 'seekTo' note.timestamp}} >
+		<a href="">{{note.time}}</a><!--Change this so it looks like clickable--> - {{note.keyword}}<br>
+	</div>
+{{/each}}
