@@ -3,6 +3,11 @@ import Ember from 'ember';
 export default Ember.Component.extend({
 
 	actions:{
+
+		seekTo: function(timestamp){
+			this.get('myPlayer').send('seekTo', timestamp);
+		},
+
 		addNote: function(){
 			let self = this;
 			
@@ -34,6 +39,6 @@ export default Ember.Component.extend({
 			});
 
 			this.set('keyword','');
-		}
-	}
+		},
+	},
 });
