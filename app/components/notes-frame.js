@@ -2,8 +2,8 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
 
-	actions:{
 
+	actions:{
 		seekTo: function(timestamp){
 			this.get('myPlayer').send('seekTo', timestamp);
 		},
