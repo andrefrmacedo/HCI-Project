@@ -1,8 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-
-
 	
 
 	actions:{
@@ -40,7 +38,7 @@ export default Ember.Component.extend({
 				timestamp: timestamp,
 				time: time,
 				description: '',
-				collapsed: 'false'
+				collapsed: false
 			});
 			
 			note.save().then(function(){
