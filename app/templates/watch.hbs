@@ -1,14 +1,13 @@
-{{model.youtube.title}}
 
-<div>
-	<div class="col-md-7 edited">
-		{{video-frame model=model.youtube myPlayer=myPlayer}}
-	</div>
-	<div class = "col-md-5">
-		{{notes-frame model=model myPlayer=myPlayer}}
-	</div>
+<div class="col-md-8">
+	{{model.youtube.title}}
+	{{video-frame model=model.youtube myPlayer=myPlayer}}
+</div>
+<div class = "col-md-4">
+	{{notes-frame model=model myPlayer=myPlayer}}
 </div>
 
 
-
-{{tag-cloud model=model.notes}}
+<div class="row">
+	{{tag-cloud model=model.notes}}
+</div>

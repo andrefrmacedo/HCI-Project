@@ -6,12 +6,12 @@
 		{{#each model.notes as |note|}}
 		<div class="panel panel-default">
 
-			<div class="panel-heading" {{action 'collapseDrop' note}}>
-				 <a {{action 'seekTo' note.timestamp}}>{{note.time}}</a><!--Change this so it looks like clickable--> - {{note.keyword}}
+			<div class="panel-heading" >
+				 <span class="time" {{action 'seekTo' note.timestamp}}>{{note.time}}</span> - <span style="cursor:pointer" {{action 'collapseDrop' note}}>{{note.keyword}}</span> <button {{action 'removeNote' note}}>Remove</button>
 			</div>
 			{{#if note.collapsed}}	
 				<div class="panel-body">
-   			 	Panel content
+   			 		{{note.description}}
  				</div>
  			{{/if}}
 		</div>
