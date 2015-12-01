@@ -1,7 +1,20 @@
-{{input value=keyword placeholder="Write keyword here..." enter="addNote"}}
-<br>
-{{#each model.notes as |note|}}
-	<div  {{action 'seekTo' note.timestamp}} >
-		<a href="">{{note.time}}</a><!--Change this so it looks like clickable--> - {{note.keyword}}<br>
-	</div>
-{{/each}}
+<div>
+	{{input value=keyword placeholder="Write keyword here..." enter="addNote"}}
+		<br>
+	
+		{{#each model.notes as |note|}}
+		<div class="panel panel-default">
+			<div class="panel-heading">	
+				 <a href="">{{note.time}}</a><!--Change this so it looks like clickable--> - {{note.keyword}}
+			</div>
+			<div class="panel-body">
+   			 	Panel content
+ 			</div>
+		</div>
+		<br>
+		{{/each}}
+	
+</div>
+
+
+
