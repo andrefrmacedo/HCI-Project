@@ -1,5 +1,14 @@
 {{model.youtube.title}}
 
-{{video-frame model=model.youtube myPlayer=myPlayer}}
-{{notes-frame model=model myPlayer=myPlayer}}
+<div>
+	<div class = "col-md-7 edited">
+		{{video-frame model=model.youtube myPlayer=myPlayer}}
+	</div>
+	<div class = "col-md-5">
+		{{notes-frame model=model myPlayer=myPlayer}}
+	</div>
+</div>
+
+
+
 {{tag-cloud model=model.notes}}

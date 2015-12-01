@@ -3,7 +3,15 @@ import Ember from 'ember';
 export default Ember.Component.extend({
 
 
+	
+
 	actions:{
+
+		collapseDrop: function(note){
+			note.toggleProperty('collapsed');
+		},
+
+
 		seekTo: function(timestamp){
 			this.get('myPlayer').send('seekTo', timestamp);
 		},
@@ -31,6 +39,8 @@ export default Ember.Component.extend({
 				keyword: this.get('keyword'),
 				timestamp: timestamp,
 				time: time,
+				description: '',
+				collapsed: 'false'
 			});
 			
 			note.save().then(function(){

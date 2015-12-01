@@ -5,4 +5,6 @@ export default DS.Model.extend({
   	keyword: DS.attr('string'),
   	timestamp: DS.attr('string'),
   	time: DS.attr('string'),
+  	description: DS.attr('string'),
+  	collapsed: DS.attr(),
 });
