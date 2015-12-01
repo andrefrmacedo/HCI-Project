@@ -6,9 +6,7 @@ export default Ember.Component.extend({
 	actions:{
 
 		removeNote: function(note){
-			note.destroyRecord().then(function(){
-				this.get('model').save();
-			});
+			note.destroyRecord();
 		},
 
 		collapseDrop: function(note){

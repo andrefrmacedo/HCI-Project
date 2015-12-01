@@ -1,13 +1,12 @@
+{{input value=keyword placeholder="Write keyword here..." enter="addNote" }}
 
-<div>
-	{{input value=keyword placeholder="Write keyword here..." enter="addNote"}}
-		<br>
-	
-		{{#each model.notes as |note|}}
+	{{#each model.notes as |note|}}
 		<div class="panel panel-default">
-
 			<div class="panel-heading" >
-				 <span class="time" {{action 'seekTo' note.timestamp}}>{{note.time}}</span> - <span style="cursor:pointer" {{action 'collapseDrop' note}}>{{note.keyword}}</span> <button {{action 'removeNote' note}}>Remove</button>
+				 <span class="time" {{action 'seekTo' note.timestamp}}>{{note.time}}</span>
+				 <span style="cursor:pointer" {{action 'collapseDrop' note}}> - {{note.keyword}} 
+				 <button>{{#if note.collapsed}}Up{{else}}Down{{/if}}</button></span>
+				 <button style="float:right" {{action 'removeNote' note}}>Remove</button>
 			</div>
 			{{#if note.collapsed}}	
 				<div class="panel-body">
@@ -15,10 +14,8 @@
  				</div>
  			{{/if}}
 		</div>
-		<br>
-		{{/each}}
-	
-</div>
+		
+	{{/each}}
 
 
 
