@@ -3,27 +3,27 @@ import Ember from 'ember';
 export default Ember.Component.extend({
 	
 	words: function(){
-		let arr = this.get('model.notes');
-			let count = { };
-			let wordCount = [];
+		
+		let count = { };
+		let wordCount = [];
 
-			this.get('model.notes').map(note => {
-				
-				if(count[note.get('keyword')]){
-					count[note.get('keyword')]++;
-				}
-				else{
-					count[note.get('keyword')]=1;
-				}
-			});
-
-			for(var key in count){
-				wordCount.push({
-					text: key,
-					size: 100*count[key]/this.get('model.notes.length')+15,
-				});
-			}
+		this.get('model').map(note => {
 			
+			if(count[note.get('keyword')]){
+				count[note.get('keyword')]++;
+			}
+			else{
+				count[note.get('keyword')]=1;
+			}
+		});
+
+		for(var key in count){
+			wordCount.push({
+				text: key,
+				size: 100*count[key]/this.get('model.length')+15,
+			});
+		}
+		
 		return wordCount;
 	},
 
