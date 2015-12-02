@@ -32,8 +32,17 @@
 	margin-bottom: 20px;
 }
 
-#tag-cloud{
-	
+.pad{
+    padding: 10px;
+}
+
+.pad-top{
+    padding-top: 5px;
+}
+
+.not-link{
+    color: SlateGrey;
+    font-weight: normal;
 }
 
 body,

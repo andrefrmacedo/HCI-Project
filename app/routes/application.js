@@ -2,7 +2,11 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
 	beforeModel: function(transition) {
-    	this.get("session").fetch().catch(function() {});
+		let self=this;
+    	this.get("session").fetch().catch(function() {
+    		//self.transitionTo('application');
+    		console.log('here');
+    	});
     	
     	if(transition.targetName==='index'){
     		this.transitionTo('dashboard');
