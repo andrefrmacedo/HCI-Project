@@ -1,10 +1,24 @@
-{{#each model as |video|}}
-	{{#link-to 'watch' video}}
-	<div>
-		<img src={{video.youtube.thumbnails.default.url}}>
-		{{video.youtube.title}}
-		by: {{video.youtube.channelTitle}}
-	</div>
-	{{/link-to}}
-{{/each}}
+	<div class="container">
+		<h1 class="page-header">My Videos</h1>
+		{{#each model as |video|}}
+			{{#link-to 'watch' video}}
+			<div class= "row" style="padding:1%">
+				<div class = "col-lg-12">
+					<div class = "col-md-4">
+						<img class = "img-responsive" style = "margin-left: auto;
+    margin-right: auto;"  src={{video.youtube.thumbnails.medium.url}}>
+					</div>
+					<div class = "col-md-6" style>
 
+						<div class="row" style =" padding-top:1%">
+							{{video.youtube.title}}
+						</div>
+						<div class="row">
+							by: {{video.youtube.channelTitle}}
+						</div>
+					</div>
+				</div>
+			</div>
+			{{/link-to}}
+		{{/each}}
+	</div>

@@ -1,9 +1,107 @@
-<h2 id="title">Welcome to playNote</h2>
-	{{#if session.isAuthenticated}}
-		<button {{action "signOut"}}>Logout</button><br>
+{{#if session.isAuthenticated}}
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container topnav">
+			<div class="navbar-header">
+				{{#link-to 'dashboard' class="navbar-brand topnav clickable"}} <span class="glyphicon glyphicon-align-left">PlayNote</span>{{/link-to}}
+			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<button class="btn btn-link btn-md" {{action "signOut"}}>Logout</button>
+				</ul>
+			</div>
+		</div>
+	</nav>
 	{{outlet}}
   	{{else}}
-    	{{#link-to 'dashboard'}}<img src="assets/images/google_btn.png" {{action 'signIn' 'google'}}>{{/link-to}}
-    	{{#link-to 'dashboard'}}<img src="assets/images/facebook_btn.png" {{action 'signIn' 'facebook'}}>{{/link-to}}
-    	{{#link-to 'dashboard'}}<img src="assets/images/twitter_btn.png" {{action 'signIn' 'twitter'}}>{{/link-to}}
+		  	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		        <div class="container topnav">
+		            <!-- Brand and toggle get grouped for better mobile display -->
+		            <div  class="navbar-header">
+		                <button  type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"></button>
+		                {{#link-to 'application' class="navbar-brand topnav clickable"}} <span class="glyphicon glyphicon-align-left">PlayNote</span>{{/link-to}}
+		            </div>
+		            <!-- Collect the nav links, forms, and other content for toggling -->
+		            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		                <ul class="nav navbar-nav navbar-right">
+		                    <li>
+		                        <a class="clickable" {{action 'scroll'}} >What it does?</a>
+		                    </li>
+		                </ul>
+		            </div>
+		            <!-- /.navbar-collapse -->
+		        </div>
+		        <!-- /.container -->
+		    </nav>
+		    <!-- Header -->
+		    <div class="intro-header">
+		        <div class="container">
+		            <div class="row">
+		                <div class="col-lg-12">
+		                    <div class="intro-message">
+		                        <h1>PlayNote</h1>
+		                        <hr class="intro-divider">
+		                        <ul class="list-inline intro-social-buttons">
+		                            <li>
+		                                {{#link-to 'dashboard'}}<img src="assets/images/google_btn.png" {{action 'signIn' 'google'}}>{{/link-to}}
+		                            </li>
+		                            <li>
+		                                {{#link-to 'dashboard'}}<img src="assets/images/facebook_btn.png" {{action 'signIn' 'facebook'}}>{{/link-to}}
+		                            </li>
+		                            <li>
+		                               {{#link-to 'dashboard'}}<img src="assets/images/twitter_btn.png" {{action 'signIn' 'twitter'}}>{{/link-to}}
+		                            </li>
+		                        </ul>
+		                    </div>
+		                </div>
+		            </div>
+
+		        </div>
+		        <!-- /.container -->
+
+		    </div>
+		    <!-- /.intro-header -->
+
+		    <!-- Page Content -->
+
+		    <div id="services" class="content-section-a">
+		        <div class="container">
+		            <div class="row">
+		                <div class="col-lg-5 col-sm-6">
+		                    <hr class="section-heading-spacer">
+		                    <div class="clearfix"></div>
+		                    <h2 class="section-heading">Timestaps for your videos</h2>
+		                    <p class="lead">With this feature you can write note that summarise the video and help you and your team work better and faster.</p>
+		                </div>
+		                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+		                    <img class="img-responsive" src="assets/images/intro.png" alt="">
+		                </div>
+		            </div>
+
+		        </div>
+		        <!-- /.container -->
+
+		    </div>
+		    <!-- /.content-section-a -->
+
+		    <div class="content-section-b">
+
+		        <div class="container">
+
+		            <div class="row">
+		                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+		                    <hr class="section-heading-spacer">
+		                    <div class="clearfix"></div>
+		                    <h2 class="section-heading">Tag cloud</h2>
+		                    <p class="lead">This feature can show you the most used words in your notes and can help u summarise the videos by seeing those words</p>
+		                </div>
+		                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+		                    <img class="img-responsive" src="assets/images/12324984_960724153996315_1742201431_n.jpg" alt="">
+		                </div>
+		            </div>
+
+		        </div>
+		        <!-- /.container -->
+
+		    </div>
+		    
   	{{/if}}

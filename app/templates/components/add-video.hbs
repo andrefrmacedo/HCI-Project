@@ -1,9 +1,9 @@
-<div>
+<div class="col-md-12 space" >
 	{{#if drop}}
 		{{input type="text" placeholder="Youtube url" value=url}}
-		<button {{action 'addVideo'}}>Add</button>
+		<button type="button" class="btn btn-primary" {{action 'addVideo'}}>Add</button>
 	{{else}}
-		<button {{action 'toggleDrop'}}>Add Video</button>
+		<button type="button" class="btn btn-primary" {{action 'toggleDrop'}}>Add Video</button>
 	{{/if}}
 </div>
 
