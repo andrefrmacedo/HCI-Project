@@ -5,6 +5,10 @@ export default Ember.Component.extend({
 
 	actions:{
 
+		removeNote: function(note){
+			note.destroyRecord();
+		},
+
 		collapseDrop: function(note){
 			note.toggleProperty('collapsed');
 		},
