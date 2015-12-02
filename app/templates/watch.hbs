@@ -1,9 +1,10 @@
-
 <div class="col-md-8">
 	{{model.youtube.title}}
 	{{video-frame model=model.youtube myPlayer=myPlayer}}
-	{{tag-cloud model=model.notes}}
+	
 </div>
-<div class = "col-md-4">
-	{{notes-frame model=model myPlayer=myPlayer}}
+<div class="col-md-4">
+	<div class="row">{{tag-cloud model=model.notes}}</div>
+	<div class="row">{{notes-frame model=model myPlayer=myPlayer}}</div>
 </div>
+<div id="tag-cloud" class="col-md-10 col-md-offset-1"></div>

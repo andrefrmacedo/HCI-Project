@@ -2,6 +2,8 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
 	
+	enabled: false,
+
 	words: function(){
 		
 		let count = { };
@@ -29,10 +31,14 @@ export default Ember.Component.extend({
 
 	actions: {
 		showCloud: function(){
+			Ember.$('html, body').animate({
+		        scrollTop: Ember.$("#tag-cloud").offset().top
+		    }, 1000);
+			d3.select("svg").remove();
 			
 			let fill = d3.scale.category20();
 
-		  	d3.layout.cloud()//.size([900, 900])
+		  	d3.layout.cloud().size([800, 600])
 		      	.words(this.words())
 		      	.rotate(function() { return ~~(Math.random() * 2) * 90; })
 		      	.font("Impact")
@@ -41,11 +47,11 @@ export default Ember.Component.extend({
 		      	.start();
 
 		  	function draw(words) {
-		    	d3.select("body").append("svg")
-		        	.attr("width", 800)
-		        	.attr("height", 800)
+		    	d3.select("#tag-cloud").append("svg")
+		        	.attr("width", '100%')
+		        	.attr("height", 600)
 		      	.append("g")
-		        	.attr("transform", "translate(400,400)")
+		        	.attr("transform", "translate(400,300)")
 		      	.selectAll("text")
 		        	.data(words)
 		      	.enter().append("text")
@@ -54,7 +60,7 @@ export default Ember.Component.extend({
 		        	.style("fill", function(d, i) { return fill(i); })
 		        	.attr("text-anchor", "middle")
 		        	.attr("transform", function(d) {
-		        	  return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+		        		return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
 		        	})
 		        .text(function(d) { return d.text; });
 		  	}

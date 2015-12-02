@@ -1,5 +1,4 @@
 .time{
-	cursor: pointer; 
 	background-color: #E0E0E0; 
 	border-radius: 3px;
 	padding: 0px 2px;
@@ -17,4 +16,17 @@
 
 .remove{
 	float: right;
+}
+
+.note{
+	height: 500px;
+	overflow: auto;
+}
+
+.clickable{
+	cursor: pointer;
+}
+
+#tag-cloud{
+	
 }
