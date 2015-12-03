@@ -4,14 +4,19 @@ export default Ember.Route.extend({
 	beforeModel: function(transition) {
 		let self=this;
     	
-    	this.get("session").fetch().catch(function() {
-    		self.transitionTo('application');
-    	}).then(function(){
-    		if(self.get('session.isAuthenticated') && transition.targetName==='index'){
-    			self.transitionTo('dashboard');	
-    		}	
+    	this.get("session").fetch().catch(function() {}).then(function(){
+    		if(self.get('session.isAuthenticated')){
+    			if(transition.targetName==='index'){
+    				self.transitionTo('dashboard');	
+    			}
+    		}
+    		else{
+    			self.transitionTo('application');
+    		}
+
     	});
   	},
+
 
   	actions: {
 		signIn: function(provider){
