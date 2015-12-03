@@ -3,14 +3,14 @@ import Ember from 'ember';
 export default Ember.Route.extend({
 	beforeModel: function(transition) {
 		let self=this;
-    	this.get("session").fetch().catch(function() {
-    		//self.transitionTo('application');
-    		console.log('here');
-    	});
     	
-    	if(transition.targetName==='index'){
-    		this.transitionTo('dashboard');
-    	}
+    	this.get("session").fetch()
+    	.catch(function() {})
+    	.then(function(){
+    		if(self.get('session.isAuthenticated') && transition.targetName==='index'){
+    			self.transitionTo('dashboard');	
+    		}	
+    	});
   	},
 
   	actions: {
