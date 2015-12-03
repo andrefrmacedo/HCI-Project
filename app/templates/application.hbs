@@ -42,20 +42,14 @@
                         <h1>PlayNote</h1>
                         <hr class="intro-divider">
                         <ul class="list-inline intro-social-buttons">
-                            <li>
-                                {{#link-to 'dashboard'}}
-                                	<img src="assets/images/google_btn.png" {{action 'signIn' 'google'}}>
-                                {{/link-to}}
+                            <li>    
+                            	<img src="assets/images/google_btn.png" class="clickable" {{action 'signIn' 'google'}}>
                             </li>
                             <li>
-                                {{#link-to 'dashboard'}}
-                                	<img src="assets/images/facebook_btn.png" {{action 'signIn' 'facebook'}}>
-                                {{/link-to}}
+                                <img src="assets/images/facebook_btn.png" class="clickable" {{action 'signIn' 'facebook'}}>
                             </li>
                             <li>
-                               {{#link-to 'dashboard'}}
-                               		<img src="assets/images/twitter_btn.png" {{action 'signIn' 'twitter'}}>
-                               	{{/link-to}}
+                               	<img src="assets/images/twitter_btn.png" class="clickable" {{action 'signIn' 'twitter'}}>
                             </li>
                         </ul>
                     </div>
