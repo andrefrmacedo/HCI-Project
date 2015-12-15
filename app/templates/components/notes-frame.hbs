@@ -1,5 +1,5 @@
 <div class="form-group">
-	{{input value=keyword placeholder="Write keyword here..." enter="addNote" class="form-control" id="focusedInput"}}
+	{{input value=keyword placeholder="Press enter to insert your keyword..." enter="addNote" class="form-control" id="focusedInput"}}
 </div>
 <div class="note">
 	{{#each model.notes as |note|}}
@@ -25,4 +25,6 @@
 				{{/if}}
 		</div>
 	{{/each}}
+		
+
 </div>

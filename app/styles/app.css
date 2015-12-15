@@ -1,3 +1,17 @@
+.logo{
+
+    position: relative;
+    height:50px;
+    bottom:66%;
+    display: inline-block;
+}
+.font-logo{
+    color:white;
+    display: inline-block;
+    position: relative;
+    bottom: 57%;
+}
+
 .time{
 	background-color: #E0E0E0; 
 	border-radius: 3px;
@@ -27,9 +41,15 @@
 	cursor: pointer;
 }
 
-.space{
-	margin-top: 10px;
-	margin-bottom: 20px;
+.inputSpace{
+	
+  margin-top: 20px;
+}
+
+.inputAddVideoBar{
+
+    height:40px;
+    width:40%;
 }
 
 .pad{

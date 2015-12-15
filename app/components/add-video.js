@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-	drop: false,
+	drop: true,
 
 	actions: {
 		addVideo: function(){
@@ -11,8 +11,8 @@ export default Ember.Component.extend({
 			});
 		},
 		
-		toggleDrop: function(){
+		/*toggleDrop: function(){
 			this.toggleProperty('drop');
-		}
+		}*/
 	}
 });
