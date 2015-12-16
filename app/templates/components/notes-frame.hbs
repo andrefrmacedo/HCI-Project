@@ -4,7 +4,7 @@
 <button type="button" class="col-md-3 btn btn-success" {{action 'addNote'}}>Add keyword</button>
 <div class="note col-md-12">
 	{{#each model.notes as |note|}}
-		<div class="panel panel-default">
+		<div class="panel panel-default note-panel">
 			<div class="panel-heading" >
 				<span class="time clickable" {{action 'seekTo' note.timestamp}}>{{note.time}}</span>
 				<span> - {{note.keyword}}</span>
