@@ -116,6 +116,7 @@ h6 {
 .jumbotron{
     margin-left: 51px;
     margin-right: 51px;
+    background-color: white;
 }
 .row-watch{
     padding-top: 75px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
