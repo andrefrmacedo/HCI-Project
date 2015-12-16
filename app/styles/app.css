@@ -144,10 +144,14 @@ h6 {
 
 .cloud-logo{
     width: 300px;
-    float: right;
+    left: 64%;
     position: relative;
-    right: 14.5%;
     margin-top: -3%;
+}
+
+#tag-cloud{
+    padding-left: 15%;
+    padding-right: 15%;
 }
 
 .intro-header {
