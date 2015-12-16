@@ -138,17 +138,17 @@ h6 {
 }
 
 .heading-cloud{
-    display: inline-block;
-    top: 10%;
-    position: absolute;
+    display: inline-block; 
     font-size: 24px;
+    position: relative;
+    bottom: 67px;
 }
 
 .cloud-logo{
-    width: 300px;
-    left: 32%;
+    display: inline-block;
+    bottom:98px;
     position: relative;
-    margin-top: -9%;
+    right: 25px;
 }
 
 #tag-cloud{
