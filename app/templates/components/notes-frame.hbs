@@ -1,21 +1,13 @@
 <div class="form-group">
-	{{input value=keyword placeholder="Press enter to insert your keyword..." enter="addNote" class="form-control" id="focusedInput"}}
+	{{input value=keyword placeholder="Insert your keyword..." enter="addNote" class="form-control" id="focusedInput"}}
+	<button type="button" class="btn btn-block btn-success" {{action 'addNote'}}>Add</button>
 </div>
 <div class="note">
 	{{#each model.notes as |note|}}
 		<div class="panel panel-default">
 			<div class="panel-heading" >
 				<span class="time clickable" {{action 'seekTo' note.timestamp}}>{{note.time}}</span>
-				<span> -  
-					<span class="clickable" {{action 'collapseDrop' note}}>
-						{{note.keyword}}
-				 		{{#if note.collapsed}}
-				 			<span class="glyphicon glyphicon-menu-up"></span>
-				 		{{else}}
-				 			<span class="glyphicon glyphicon-menu-down"></span>
-				 		{{/if}}
-				 	</span>
-				</span>
+				<span> - {{note.keyword}}</span>
 				<button class="remove btn btn-link btn-xs" {{action 'removeNote' note}}><span class="glyphicon glyphicon-remove"></span></button>
 			</div>
 			{{#if note.collapsed}}	

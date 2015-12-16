@@ -1,13 +1,6 @@
 <div class="col-md-12 inputSpace">
-	{{#if drop}}
-	<div class =  "col-md-offset-4 ">
-		{{input class = "inputAddVideoBar" type="text" placeholder="Youtube link" value=url}}
+	<div class="col-md-offset-4">
+		{{input class = "inputAddVideoBar" type="text" placeholder="Enter your youtube video link" enter="addVideo" value=url}}
 		<button type="button" class="btn btn-success" {{action 'addVideo'}}>Add</button>
 	</div>
-	{{else}}
-	<!-- <div class = "col-md-offset-5">
-		<button type="button" class="btn btn-primary btn-lg"{{action 'toggleDrop'}}>Add Video</button>
-	</div> -->
-	{{/if}}
 </div>
-
