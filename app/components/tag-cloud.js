@@ -5,7 +5,7 @@ export default Ember.Component.extend({
 	enabled: false,
 
 	words: function(){
-		console.log(this.get('model'));
+		
 		let count = { };
 		let wordCount = [];
 
