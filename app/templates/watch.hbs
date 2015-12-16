@@ -1,11 +1,19 @@
-<div class="watch">
-	<div class="col-md-8">
-		<h3 class="page-header">{{model.youtube.title}}</h3>
-		{{video-frame model=model.youtube myPlayer=myPlayer}}
+<div class="container-fluid container-watch">
+	<div class="row row-watch">
+		<div class="col-md-8">
+			<h3 class="page-header">{{model.youtube.title}}</h3>
+			{{video-frame model=model.youtube myPlayer=myPlayer}}
+		</div>
+		<div style = "margin-top:5%" class="col-md-4 ">
+			<div class="row">{{notes-frame model=model myPlayer=myPlayer}}</div>
+		</div>
 	</div>
-	<div class="col-md-4">
-		<div class="row">{{tag-cloud model=model.notes}}</div>
-		<div class="row">{{notes-frame model=model myPlayer=myPlayer}}</div>
+</div>
+<div class = "container-fluid container-cloud">
+  <div class="jumbotron" style = "padding-left:0px">
+	<div class ="row row-cloud">
+		<div class ="col-md-12 col-cloudgen">{{tag-cloud model=model.notes}}</div>
+		<div id="tag-cloud" class="col-md-12"></div>
 	</div>
-	<div id="tag-cloud" class="col-md-10 col-md-offset-1"></div>
+   </div>
 </div>

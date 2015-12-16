@@ -9,10 +9,6 @@ export default Ember.Component.extend({
 			note.destroyRecord();
 		},
 
-		collapseDrop: function(note){
-			note.toggleProperty('collapsed');
-		},
-
 
 		seekTo: function(timestamp){
 			this.get('myPlayer').send('seekTo', timestamp);
@@ -42,7 +38,6 @@ export default Ember.Component.extend({
 				timestamp: timestamp,
 				time: time,
 				description: '',
-				collapsed: false
 			});
 			
 			note.save().then(function(){
