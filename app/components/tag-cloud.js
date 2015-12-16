@@ -38,10 +38,10 @@ export default Ember.Component.extend({
 			
 			let fill = d3.scale.category20();
 
-		  	d3.layout.cloud().size([800, 600])
+		  	d3.layout.cloud().size([900, 600])
 		      	.words(this.words())
 		      	.rotate(function() { return ~~(Math.random() * 2) * 90; })
-		      	.font("Impact")
+		      	.font("Helvetica")
 		      	.fontSize(function(d) { return d.size; })
 		      	.on("end", draw)
 		      	.start();
@@ -51,7 +51,7 @@ export default Ember.Component.extend({
 		        	.attr("width", '100%')
 		        	.attr("height", 600)
 		      	.append("g")
-		        	.attr("transform", "translate(400,300)")
+		        	.attr("transform", "translate(450,300)")
 		      	.selectAll("text")
 		        	.data(words)
 		      	.enter().append("text")

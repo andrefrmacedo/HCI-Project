@@ -1,8 +1,8 @@
-<div class="form-group">
+<div class="col-md-9">
 	{{input value=keyword placeholder="Insert your keyword..." enter="addNote" class="form-control" id="focusedInput"}}
-	<button type="button" class="btn btn-block btn-success" {{action 'addNote'}}>Add</button>
 </div>
-<div class="note">
+<button type="button" class="col-md-3 btn btn-success" {{action 'addNote'}}>Add keyword</button>
+<div class="note col-md-12">
 	{{#each model.notes as |note|}}
 		<div class="panel panel-default">
 			<div class="panel-heading" >
