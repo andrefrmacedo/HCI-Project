@@ -1,7 +1,9 @@
 # Play-note
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This is a Project for the HCI (Human-Computer Interaction) course. The purpose of this project was to create a video tagging and analysis tool to help annotation and classification of significant events along the video for content analysis.
+
+
+Live demo: https://playnote.firebaseapp.com/
 
 ## Prerequisites
 
